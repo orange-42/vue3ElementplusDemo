@@ -1,7 +1,7 @@
 <template>
   <div>
   <el-menu
-    :default-active="this.$route.path" 
+    :default-active="$route.path" 
     router
     :collapse="isCollapse"
     @open="handleOpen"
@@ -13,7 +13,7 @@
     <img src="../assets/logo.png" />
     <span>Vue3新系统模版</span>
   </div>
-   <el-menu-item class="align-left" v-for="(item,i) in routerList" :key="i" :index="item.name">
+   <el-menu-item class="align-left" v-for="(item,i) in routerList[0].children" :key="i" :index="item.name">
         <i class="el-icon-setting"></i>
         <template #title>
         {{ item.meta.title }}
@@ -28,7 +28,7 @@ import { useRoute,useRouter } from 'vue-router'
 import { defineComponent, ref } from 'vue'
 export default defineComponent({
 setup(props, ctx) {
-    const isCollapse = ref(true)
+    const isCollapse = ref(false)
     const handleOpen = (key, keyPath) => {
       console.log(key, keyPath)
     }
