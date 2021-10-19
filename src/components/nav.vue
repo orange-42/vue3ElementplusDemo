@@ -2,7 +2,7 @@
   <div>
   <el-menu
     :default-active="$route.path" 
-    router
+    :router="true"
     :collapse="isCollapse"
     @open="handleOpen"
     @close="handleClose"

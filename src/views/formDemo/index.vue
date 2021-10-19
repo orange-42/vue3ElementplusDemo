@@ -1,6 +1,6 @@
 <template>
   <div class="formList">
-    <forms @btnclick="btnClick" labelWidth="205px" :titleList="titleList" :form="form"></forms>
+    <forms @btnclick="btnClick" labelWidth="130px" :titleList="titleList" :form="form"></forms>
   </div>
 </template>
 <script>

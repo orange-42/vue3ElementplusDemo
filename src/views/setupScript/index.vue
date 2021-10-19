@@ -28,7 +28,7 @@ const tableList = reactive([{
     },{
       label:'是否开启',
       fields:'isFiring'
-    }])
+}])
 const tableData = reactive([{
   name:'教师',
   type:'教职工',
@@ -49,38 +49,38 @@ const tableData = reactive([{
   isFiring:false
 }
 ])
-    const btnList = reactive([
+const btnList = reactive([
+  {
+    label:'操作',
+    width:'',
+    options:[
       {
-        label:'操作',
-        width:'',
-        options:[
-          {
-            type:'primary',
-            size:'small',
-            loading:false,
-            icon:'el-icon-edit',
-            property:'circle',
-            label:''
-          },
-          {
-            type:'danger',
-            size:'small',
-            loading:false,
-            icon:'el-icon-delete',
-            property:'circle',
-            label:''
-          },
-          {
-            type:'text',
-            size:'small',
-            loading:false,
-            icon:'',
-            property:'',
-            label:'详情'
-          },
-        ]
-      }
-    ])
+        type:'primary',
+        size:'small',
+        loading:false,
+        icon:'el-icon-edit',
+        property:'circle',
+        label:''
+      },
+      {
+        type:'danger',
+        size:'small',
+        loading:false,
+        icon:'el-icon-delete',
+        property:'circle',
+        label:''
+      },
+      {
+        type:'text',
+        size:'small',
+        loading:false,
+        icon:'',
+        property:'',
+        label:'详情'
+      },
+    ]
+  }
+])
 function log () {
   console.log(msg);
 }
@@ -98,7 +98,8 @@ function log () {
 
 <style>
 .text {
-  color: v-bind('theme.color');
+  /* 识别 vue的变量直接在这里赋值 */
+  color: v-bind('theme.color'); 
 }
 </style>
 

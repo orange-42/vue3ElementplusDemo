@@ -1,8 +1,9 @@
 <template>
 <div>
- <el-row :gutter="20">
+ 
     <el-form ref="form" :model="form" :label-width="labelWidth">
-      <el-col v-for="(it, i) in titleList" :key="i" :xs="24" :span="it.span">
+      <el-row :gutter="20">
+      <el-col v-for="(it, i) in titleList" :key="i" :xs="24" :xl="it.span" :span="it.span">
         <div class="grid-content bg-purple">
           <el-form-item :label="it.name">
             <!-- 数字输入框 -->
@@ -83,8 +84,8 @@
           </el-form-item>
         </div>
       </el-col>
-    </el-form>
-  </el-row>
+    </el-row>
+  </el-form>
 </div>
   
 </template>

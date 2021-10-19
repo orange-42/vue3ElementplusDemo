@@ -9,6 +9,7 @@ import formRouter from './module/form'
 import mixinsRouter from './module/mixins'
 import setupRouter from './module/setupWay'
 import tableRouter from './module/table'
+import attrsdemo from './module/attrsdemo'
 
 const routes = [
     {
@@ -24,7 +25,8 @@ const routes = [
             ...formRouter,
             ...mixinsRouter,
             ...setupRouter,
-            ...tableRouter
+            ...tableRouter,
+            ...attrsdemo
         ]
     }
 ]

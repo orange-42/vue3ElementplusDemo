@@ -6,7 +6,9 @@
     <div class="content" :style="{height:$store.state.screenHeight -17 + 'px'}">
         <bread></bread>
         <div class="content-view">
+          <div class="router-view">
           <router-view></router-view>
+          </div>
         </div>
         <!-- <tables></tables> -->
     </div>
