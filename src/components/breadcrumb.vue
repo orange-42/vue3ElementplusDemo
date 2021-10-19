@@ -4,14 +4,12 @@
       <el-breadcrumb separator="/">
       <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
       <el-breadcrumb-item><a href="/">首页</a></el-breadcrumb-item>
-      <el-breadcrumb-item v-if="this.$route.matched[0].meta.title!=='首页'">{{this.$route.matched[0].meta.title}}</el-breadcrumb-item>
-      <!-- {{this.$router.currentRoute}} -->
+      <el-breadcrumb-item v-if="this.$route.meta.title!=='首页'">{{this.$route.meta.title}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="user-options">
       <popOver direction="bottom" popWidth="150"> 
         <template v-slot:user>
-          <!-- <img src="../assets/logo.png" alt="" /> -->
           <label class="strong">用户名称: <span>Marco</span></label>
         </template>
         <template v-slot:popSlotContet>
